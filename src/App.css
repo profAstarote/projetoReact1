@@ -1,38 +1,58 @@
 .App {
   text-align: center;
+  /* Alinha todos os textos e elementos internos no centro */
+  width: auto;
+  /* Define a largura como automática (ajustei pois estava vazio) */
 }
 
 .App-logo {
   height: 40vmin;
+  /* Define a altura do logo baseada no tamanho da tela (unidade responsiva) */
   pointer-events: none;
+  /* Faz com que o logo ignore cliques ou interações do mouse */
 }
 
+/* Aplica a animação apenas se o usuário NÃO tiver ativado a opção de "reduzir movimento" no sistema */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
+    /* Aplica a animação de girar: nome da animação, infinita, dura 20 segundos, velocidade constante */
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
 .App-header {
   background-color: #282c34;
+  /* Define a cor de fundo (um cinza muito escuro) */
   min-height: 100vh;
+  /* Garante que o cabeçalho tenha no mínimo a altura total da tela */
   display: flex;
+  /* Ativa o modo Flexbox para organizar os elementos internos */
   flex-direction: column;
+  /* Coloca os itens um abaixo do outro (em coluna) */
   align-items: center;
+  /* Centraliza os itens horizontalmente */
   justify-content: center;
+  /* Centraliza os itens verticalmente */
   font-size: calc(10px + 2vmin);
+  /* Calcula um tamanho de fonte que aumenta conforme a tela cresce */
   color: white;
+  /* Define a cor do texto como branco */
 }
 
 .App-link {
   color: #61dafb;
+  /* Define a cor azul clara específica para os links */
 }
 
+/* Cria os passos da animação chamada "App-logo-spin" */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
+    /* Começa na posição original (0 graus) */
   }
+
   to {
     transform: rotate(360deg);
+    /* Termina após uma volta completa (360 graus) */
   }
 }
